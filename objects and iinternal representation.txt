@@ -1,0 +1,67 @@
+Question - Write a blog about objects and its internal representation in Javascript
+
+1.what is object?
+	 *.It’s most important data-type and forms the building blocks for modern JavaScript. 
+	 *.This is quite different from JavaScript’s primitive data-types(Number, String, Boolean).
+	 *.Its more complex.
+	 *.Each object may contain any combination of these primitive data-types as well as reference data-types.
+	 *.Variables that are assigned a reference value are given a reference or a pointer to that value.
+	 *.objects are unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs.
+	 *.These keys can be variables or functions and are called properties and methods.
+
+1.Object Properties:
+ --Properties are the values associated with a JavaScript object”.
+
+    For ex:
+	var myCar = new Object();
+
+	myCar.make = 'Suzuki';
+
+	myCar.model = 'Altros';
+
+	myCar.year = 1978;
+
+	myCar.wheels = 2;
+   *.After creating myCar object, the value inside the object can be accessed using keys.
+	i.e.
+
+	myCar.year
+
+	Output: 1978
+i).The syntax for adding a property to an object is :
+	 ObjectName.ObjectProperty = propertyValue;
+
+ii).The syntax for deleting a property from an object is:
+	delete ObjectName.ObjectProperty;
+
+iii).The syntax to access a property from an object is:
+	objectName.property        
+           //or
+	objectName["property”]     
+           //or
+	objectName[expression] 
+
+2.Object methods:
+	--An object method is an object property containing a function definition
+		-- function(){return ignition.on}
+
+3.Create JavaScript Object with Object Literal:
+
+	One of easiest way to create a javascript object is object literal, simply define the property and values inside curly braces.
+	ex. let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+
+4.Create JavaScript Object with Constructor:
+	*. its  allows to create multiple objects of same flavor.
+	ex.
+		function Vehicle(name, maker) {
+	   	this.name = name;
+   		this.maker = maker;
+		}
+		let car1 = new Vehicle(’Fiesta’, 'Ford’);
+		let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
+			console.log(car1.name);    //Output: Fiesta
+			console.log(car2.name);    //Output: Santa Fe
+
+5.Using the Object.create method:
+	*.Objects can also be created using the Object.create() method. 
+	*.it allows to choose the prototype object for the object to create, without having to define a constructor function.
